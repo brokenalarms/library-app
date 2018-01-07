@@ -1,0 +1,16 @@
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>E-mail</th>
+      <th>message</th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each model as |contact|}}
+    <tr>
+      <th>{{contact.email}}</th>
+      <td>{{contact.message}}</td>
+    </tr>
+  {{/each}}
+  </tbody>
+</table>
