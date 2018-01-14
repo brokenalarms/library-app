@@ -20,7 +20,7 @@ export default Route.extend({
             })
                 .save()
                 .then(() => {
-                    this.set('controller.model.emailAddress', '');
+                    this.controller.set('model', this.model());
                 })
         }
     }
