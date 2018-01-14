@@ -4,7 +4,15 @@ export default Route.extend({
 	model() {
     return this.store.createRecord('library');
   },
-
+  buttonLabel: 'Create',
+  setupController(controller, model) {
+    this._super(controller, model);
+    this.controller.set('title', 'Create a New Library');
+    this.controller.set('buttonLabel', 'Create');
+    },
+  renderTemplate(){
+    this.render('libraries/form');
+  },
   actions: {
 
     saveLibrary(newLibrary) {

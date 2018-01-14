@@ -4,6 +4,9 @@ export default Route.extend({
 	model(params) {
 		return this.store.findRecord('library', params.library_id)	
 	},
+	renderTemplate(){
+		this.render('libraries/form');
+	},
 	actions: {
 		saveLibrary(library){
 			library.save().then(() => this.transitionTo('libraries'));
